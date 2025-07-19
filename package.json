@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
+    "ci-publish": "pnpm build && changeset publish",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
