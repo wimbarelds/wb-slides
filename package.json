@@ -1,0 +1,103 @@
+{
+  "name": "wb-slides",
+  "version": "0.1.1",
+  "description": "A slide-deck framework for React.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier . -c",
+    "prettier:fix": "prettier . -w",
+    "preview": "vite preview",
+    "tsc": "tsc -b"
+  },
+  "dependencies": {
+    "@mdx-js/react": "3.1.0",
+    "clsx": "2.1.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-markdown": "10.1.0",
+    "react-router": "7.7.0",
+    "react-syntax-highlighter": "15.6.1",
+    "remark-gfm": "4.0.1",
+    "tailwind-merge": "3.3.1",
+    "tailwindcss": "4.1.11"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.31.0",
+    "@mdx-js/rollup": "3.1.0",
+    "@microsoft/api-extractor": "7.48.1",
+    "@tailwindcss/typography": "0.5.16",
+    "@tailwindcss/vite": "4.1.11",
+    "@types/mdx": "2.0.13",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^24.0.15",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "@types/react-syntax-highlighter": "15.5.13",
+    "@vitejs/plugin-react-swc": "3.11.0",
+    "eslint": "9.31.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-refresh": "0.4.20",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "16.3.0",
+    "minimist": "^1.2.8",
+    "prettier": "^3.6.2",
+    "prettier-plugin-package": "1.4.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "8.37.0",
+    "unplugin-dts": "1.0.0-beta.4",
+    "vite": "7.0.5"
+  },
+  "peerDependencies": {
+    "@mdx-js/react": "^3.1.0",
+    "@mdx-js/rollup": "^3.1.0",
+    "clsx": "^2.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
+    "react-router": "^7.7.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "remark-gfm": "^4.0.1",
+    "tailwind-merge": "^3.3.1"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/wimbarelds/wb-slides#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wimbarelds/wb-slides.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wimbarelds/wb-slides/issues"
+  },
+  "keywords": [
+    "react",
+    "slides",
+    "slide-deck",
+    "presentation"
+  ],
+  "author": "wimbarelds",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/main.cjs",
+  "module": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.js",
+      "require": "./dist/main.cjs"
+    },
+    "./vite": {
+      "types": "./dist/vitePlugins.d.ts",
+      "import": "./dist/vitePlugins.js",
+      "require": "./dist/vitePlugins.cjs"
+    }
+  }
+}
