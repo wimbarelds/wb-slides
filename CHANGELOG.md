@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.5
+
+### Patch Changes
+
+- f7cd2f1: Exposed route-utils
+
 ## 0.1.4
 
 ### Patch Changes
