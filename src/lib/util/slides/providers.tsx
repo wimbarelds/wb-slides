@@ -1,10 +1,10 @@
 import { type ComponentType, type ReactNode, useMemo } from 'react';
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 
 import { Layout as DefaultLayout } from '../../components/layout/Layout';
 import type { Topic } from '../../types';
 import { SlidesContext } from './SlidesContext';
-import { slidesToRoutes } from './util';
+import { createRootRoute, slidesToRoutes } from './routeUtils';
 
 interface SlidesProviderProps {
   slides: Topic[];
@@ -25,22 +25,13 @@ export function SlidesRouterProvider({
   Layout = DefaultLayout,
 }: SlidesRouterProviderProps) {
   const router = useMemo(() => {
-    return createBrowserRouter(
-      [
-        {
-          path: '/',
-          element: (
-            <Layout>
-              <Outlet />
-            </Layout>
-          ),
-          children: slidesToRoutes(slides),
-        },
-      ],
-      {
-        basename: new URL(document.baseURI).pathname || undefined,
-      },
-    );
+    const rootRoute = createRootRoute({
+      LayoutComponent: Layout,
+      children: slidesToRoutes(slides),
+    });
+
+    const basename = new URL(document.baseURI).pathname || undefined;
+    return createBrowserRouter([rootRoute], { basename });
   }, [Layout, slides]);
 
   return (

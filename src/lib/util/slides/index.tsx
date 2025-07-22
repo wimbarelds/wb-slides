@@ -4,6 +4,7 @@ import type { Slide, SlideComponent, Topic } from '../../types';
 import { slugify } from '../slugify';
 import { useSlides } from './hooks';
 import { SlidesProvider, SlidesRouterProvider } from './providers';
+import { slidesToRoutes, topicToRoute, createRootRoute } from './routeUtils';
 
 function createSlides<T extends Topic[]>(slides: T): T {
   return slides;
@@ -50,4 +51,7 @@ export {
   SlidesProvider,
   SlidesRouterProvider,
   useSlides,
+  topicToRoute,
+  slidesToRoutes,
+  createRootRoute,
 };
