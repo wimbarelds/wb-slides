@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.7
+
+### Patch Changes
+
+- d8e197b: Added option in muiFont to inline stuff
+
 ## 0.1.6
 
 ### Patch Changes
