@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.8
+
+### Patch Changes
+
+- cb2dc93: Remove tailwind-merge
+
 ## 0.1.7
 
 ### Patch Changes
