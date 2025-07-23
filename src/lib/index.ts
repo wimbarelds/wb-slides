@@ -4,7 +4,6 @@ export * from './components/common/Collapse';
 export * from './components/common/ImagePreview';
 export * from './components/common/JsonViewer';
 export * from './components/common/Keyboard';
-export * from './components/common/Markdown';
 export * from './components/common/MuiIcon';
 export * from './components/common/Prose';
 export * from './components/common/Tooltip';

@@ -3,14 +3,12 @@ import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
 import xml from 'react-syntax-highlighter/dist/esm/languages/prism/xml-doc';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import { MarkDown } from './Markdown';
-
 SyntaxHighlighter.registerLanguage('tsx', tsx);
 SyntaxHighlighter.registerLanguage('xml', xml);
 
 interface CodeProps {
   code: string;
-  title?: string;
+  language?: string;
 }
 
 function removeNoCheck(str: string) {
@@ -28,19 +26,10 @@ function removeNoCheck(str: string) {
   return lines.slice(start, end ? end * -1 : lines.length).join('\n');
 }
 
-export function Code({ code, title }: CodeProps) {
-  const content = (
-    <div className="not-prose">
-      <SyntaxHighlighter language="tsx" style={vscDarkPlus} children={removeNoCheck(code)} />
-    </div>
-  );
-  if (!title) return content;
+export function Code({ code, language = 'tex' }: CodeProps) {
   return (
-    <>
-      <div className="mb-6">
-        <MarkDown content={`## ${title}`} />
-      </div>
-      <SyntaxHighlighter language="tsx" style={vscDarkPlus} children={removeNoCheck(code)} />
-    </>
+    <div className="not-prose">
+      <SyntaxHighlighter language={language} style={vscDarkPlus} children={removeNoCheck(code)} />
+    </div>
   );
 }
