@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.9
+
+### Patch Changes
+
+- b00e7c3: fix typo
+
 ## 0.1.8
 
 ### Patch Changes
