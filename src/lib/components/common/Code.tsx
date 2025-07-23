@@ -26,7 +26,7 @@ function removeNoCheck(str: string) {
   return lines.slice(start, end ? end * -1 : lines.length).join('\n');
 }
 
-export function Code({ code, language = 'tex' }: CodeProps) {
+export function Code({ code, language = 'tsx' }: CodeProps) {
   return (
     <div className="not-prose">
       <SyntaxHighlighter language={language} style={vscDarkPlus} children={removeNoCheck(code)} />
