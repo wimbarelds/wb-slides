@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 
 import type { JsonData } from '../../types';
-import { cn } from '../../util/cn';
+import clsx from 'clsx';
 
 type JsonObject = { [key: string]: JsonData };
 
@@ -154,7 +154,7 @@ function ToggleButton({ expanded, setExpanded }: ToggleButtonProps) {
   const toggle = () => setExpanded((prev) => !prev);
   return (
     <button
-      className={cn(
+      className={clsx(
         'absolute -translate-x-full -ml-2 rounded-sm flex gap-2 text-sm border px-1 py-0.5 w-5 h-5 items-center justify-center font-bold',
         {
           ['bg-slate-400 text-black']: expanded,
