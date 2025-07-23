@@ -13,17 +13,14 @@ export default defineConfig(({ command }) => ({
     tailwindcss(),
     vitePluginGhPagesBase(),
     vitePluginMuiIcons(
-      'chevron_right',
-      'chevron_left',
-      'stat_1',
-      'stat_minus_1',
-      'more_horiz',
-      'construction',
+      ['chevron_right', 'chevron_left', 'stat_1', 'stat_minus_1', 'more_horiz', 'construction'],
+      { inline: 'full' },
     ),
     ...(command === 'build'
       ? [dts({ tsconfigPath: './tsconfig.build.json', bundleTypes: true })]
       : []),
   ],
+  resolve: { noExternal: ['node-fetch'] },
   build: {
     lib: {
       entry: {
@@ -32,6 +29,7 @@ export default defineConfig(({ command }) => ({
       },
     },
     rollupOptions: {
+      treeshake: true,
       external: [
         'clsx',
         'react',
@@ -46,6 +44,21 @@ export default defineConfig(({ command }) => ({
         'fs',
         'path',
         'process',
+        'node:http',
+        'node:https',
+        'node:zlib',
+        'node:stream',
+        'node:buffer',
+        'fs/promises',
+        'node:url',
+        'node:util',
+        'node:net',
+        'node:fs',
+        'node:path',
+        'worker_threads',
+        'node:process',
+        'node:stream/web',
+        'buffer',
       ],
     },
   },
