@@ -39,7 +39,6 @@ export default defineConfig(({ command }) => ({
         'react-syntax-highlighter',
         '@mdx-js/rollup',
         '@mdx-js/react',
-        'tailwind-merge',
         'vite',
         'fs',
         'path',

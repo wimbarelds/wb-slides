@@ -1,6 +1,5 @@
+import clsx from 'clsx';
 import { createContext, type ReactNode, useContext } from 'react';
-
-import { cn } from '../../util/cn';
 
 const ProseContext = createContext(false);
 
@@ -15,7 +14,7 @@ export function Prose({ className, children }: Props) {
 
   return (
     <ProseContext.Provider value={true}>
-      <article className={cn(`prose dark:prose-invert w-full max-w-none`, className)}>
+      <article className={clsx(`prose dark:prose-invert w-full max-w-none`, className)}>
         {children}
       </article>
     </ProseContext.Provider>

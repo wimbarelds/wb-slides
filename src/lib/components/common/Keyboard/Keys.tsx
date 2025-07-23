@@ -1,4 +1,4 @@
-import { cn } from '../../../util/cn';
+import clsx from 'clsx';
 import { useKeyboardContext } from './context';
 import { vw } from './helper';
 import { Key } from './Key';
@@ -7,7 +7,7 @@ import type { TKeys } from './types';
 export function Keys({ keys, style, className }: TKeys) {
   const { baseKeySize } = useKeyboardContext();
   return (
-    <div style={style?.((ratio) => vw(baseKeySize, ratio))} className={cn('flex', className)}>
+    <div style={style?.((ratio) => vw(baseKeySize, ratio))} className={clsx('flex', className)}>
       {keys.map((key, index) => {
         if (Array.isArray(key)) {
           return <Keys key={index} keys={key} />;

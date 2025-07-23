@@ -1,4 +1,4 @@
-import { cn } from '../../../util/cn';
+import clsx from 'clsx';
 import { useKeyboardContext } from './context';
 import { getKeyStuff } from './helper';
 import type { TKey } from './types';
@@ -18,7 +18,7 @@ export function Key({ value }: KeyProps) {
   return (
     <button
       style={style}
-      className={cn(className, onClick ? 'hover:bg-white/10' : 'cursor-default', {
+      className={clsx(className, onClick ? 'hover:bg-white/10' : 'cursor-default', {
         'outline-green-400 outline-2 bg-green-400/20': isHighlight,
       })}
     >

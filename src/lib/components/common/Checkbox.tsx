@@ -1,6 +1,5 @@
+import clsx from 'clsx';
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
-
-import { cn } from '../../util/cn';
 
 interface Props {
   show: boolean;
@@ -11,7 +10,7 @@ interface Props {
 export function Checkbox({ show, setShow, children, className }: Props) {
   return (
     <label
-      className={cn(
+      className={clsx(
         'not-prose inline-flex items-baseline gap-2 rounded-md mt-2 px-3 py-1 text-sm cursor-pointer',
         className,
       )}

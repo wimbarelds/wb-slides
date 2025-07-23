@@ -13,6 +13,5 @@ export * from './components/layout/Nav/QuickBar';
 export * from './components/layout/Nav/SlideNav';
 export * from './components/layout/Nav/useNavTriggers';
 export * from './types';
-export * from './util/cn';
 export * from './util/slides';
 export * from './util/slugify';

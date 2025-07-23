@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
-import { cn } from '../../util/cn';
 import { MuiIcon } from './MuiIcon';
+import clsx from 'clsx';
 
 interface Props {
   title?: ReactNode;
@@ -13,7 +13,7 @@ interface Props {
 export function Collapse({ title, children, className, prose }: Props) {
   return (
     <details
-      className={cn(
+      className={clsx(
         'group rounded-lg border px-4 py-2 border-gray-700/50 bg-gray-950/50 open:border-gray-700/50 open:bg-gray-950/50',
         { ['not-prose']: !prose },
         className,

@@ -1,9 +1,9 @@
 import { type Dispatch, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router';
 
-import { cn } from '../../../util/cn';
 import { useSlides } from '../../../util/slides';
 import { useNavIndeces } from '../../../util/slides/hooks';
+import clsx from 'clsx';
 
 interface SlideNavProps {
   open?: boolean;
@@ -60,7 +60,7 @@ export function SlideNav({ open, setOpen }: SlideNavProps) {
       inert={!open}
       aria-hidden={!open}
       aria-label="Slide navigation"
-      className={cn('transition-all duration-400 relative z-20', {
+      className={clsx('transition-all duration-400 relative z-20', {
         'opacity-0 -translate-y-full': !open,
       })}
     >
@@ -115,10 +115,10 @@ export function SlideNav({ open, setOpen }: SlideNavProps) {
                         e.stopPropagation();
                         setOpen(false);
                       }}
-                      className={cn(
-                        'border p-1 rounded transition hover:scale-105 w-full py-2.5 leading-[1.2] opacity-75 bg-slate-800 block text-center pointer-events-auto focus:outline-2 outline-sky-400',
+                      className={clsx(
+                        'p-1 rounded transition hover:scale-105 w-full py-2.5 leading-[1.2] opacity-75 bg-slate-800 block text-center pointer-events-auto focus:outline-2 outline-sky-400',
                         { 'assignment-link': item.type === 'assignment' },
-                        { 'border-2': isActive },
+                        isActive ? 'border-2' : 'border',
                         // {
                         //   [isAssignment
                         //     ? 'ring-2 ring-yellow-200 focus:ring-yellow-400'

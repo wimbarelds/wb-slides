@@ -1,8 +1,8 @@
 import type { Dispatch } from 'react';
 
-import { cn } from '../../../util/cn';
 import { useHasNextSlide, useHasPrevSlide, useSlideNav } from '../../../util/slides/hooks';
 import { MuiIcon } from '../../common/MuiIcon';
+import clsx from 'clsx';
 
 interface BarProps {
   open?: boolean;
@@ -16,9 +16,13 @@ export function QuickBar({ open, setOpen }: BarProps) {
 
   return (
     <div
-      className={cn('flex items-center justify-between *:pointer-events-auto transition-all', {
-        '-translate-y-full opacity-0 *:pointer-events-none': open,
-      })}
+      className={clsx(
+        'flex items-center justify-between transition-all',
+        open ? '*:pointer-events-none' : '*:pointer-events-auto',
+        {
+          '-translate-y-full opacity-0': open,
+        },
+      )}
       inert={open}
     >
       <ArrowButton
@@ -28,7 +32,7 @@ export function QuickBar({ open, setOpen }: BarProps) {
         onClick={() => gotoPrevSlide()}
       />
       <button
-        className={cn('cursor-pointer p-2 text-slate-300 hover:text-slate-50 ')}
+        className="cursor-pointer p-2 text-slate-300 hover:text-slate-50"
         onClick={(e) => {
           e.stopPropagation();
           setOpen((prev) => !prev);
@@ -68,13 +72,13 @@ function ArrowButton({ className, disabled, iconClass, iconName, onClick }: Arro
         }
       }}
       disabled={disabled}
-      className={cn(
+      className={clsx(
         'cursor-pointer text-slate-300 pointer-events-auto p-2',
         'disabled:text-slate-400 disabled:cursor-default',
       )}
     >
       <div
-        className={cn(
+        className={clsx(
           'bg-cyan-950',
           'border-2 rounded-full w-8 h-6 flex items-center justify-center',
           'border-current',

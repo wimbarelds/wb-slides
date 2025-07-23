@@ -1,4 +1,4 @@
-import { cn } from '../../util/cn';
+import clsx from 'clsx';
 
 interface Props {
   name: string;
@@ -8,7 +8,7 @@ interface Props {
 
 export function MuiIcon({ name, accessibleText, className }: Props) {
   return (
-    <span className={cn('material-symbols-outlined', className)} aria-label={accessibleText}>
+    <span className={clsx('material-symbols-outlined', className)} aria-label={accessibleText}>
       {name}
     </span>
   );
