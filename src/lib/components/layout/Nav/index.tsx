@@ -16,11 +16,11 @@ export function Nav() {
 
   useEffect(() => {
     if (open) {
-      document.body.classList.remove('overflow-auto');
-      document.body.classList.add('overflow-hidden');
+      document.documentElement.classList.remove('overflow-auto');
+      document.documentElement.classList.add('overflow-hidden');
     } else {
-      document.body.classList.add('overflow-auto');
-      document.body.classList.remove('overflow-hidden');
+      document.documentElement.classList.add('overflow-auto');
+      document.documentElement.classList.remove('overflow-hidden');
     }
   }, [open]);
 

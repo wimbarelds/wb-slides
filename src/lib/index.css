@@ -6,13 +6,13 @@
 @layer base {
   :root {
     @apply text-[16px] sm:text-[20px];
-
     --colors:
       color-mix(in oklch, oklch(36.322% 0.15751 300.084) 75%, black),
       color-mix(in oklch, oklch(45.455% 0.18093 331.818) 75%, black),
       color-mix(in oklch, oklch(53.975% 0.21708 22.821) 75%, black),
       color-mix(in oklch, oklch(70.528% 0.17361 55.465) 75%, black);
-    background: linear-gradient(45deg, var(--colors)) fixed;
+    background: color-mix(in oklch, oklch(53.975% 0.21708 22.821) 75%, black)
+      linear-gradient(45deg, var(--colors)) fixed repeat;
   }
   button,
   summary {
@@ -51,8 +51,7 @@
   .styled-scrollbar {
     scrollbar-width: thin;
     scrollbar-gutter: stable;
-    scrollbar-color: --alpha(var(--color-slate-50) / 75%)
-      --alpha(oklch(53.975% 0.21708 22.821) / 30%);
+    scrollbar-color: #f29894 #4f000a;
   }
   .mui-icon {
     font-family: 'Material Symbols Outlined';
