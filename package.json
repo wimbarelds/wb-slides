@@ -84,9 +84,9 @@
       "require": "./dist/main.cjs"
     },
     "./vite": {
-      "types": "./dist/vitePlugins.d.ts",
-      "import": "./dist/vitePlugins.js",
-      "require": "./dist/vitePlugins.cjs"
+      "types": "./dist/vite.d.ts",
+      "import": "./dist/vite.js",
+      "require": "./dist/vite.cjs"
     }
   }
 }
