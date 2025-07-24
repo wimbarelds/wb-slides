@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.14
+
+### Patch Changes
+
+- 97417db: remove node-fetch
+
 ## 0.1.13
 
 ### Patch Changes
