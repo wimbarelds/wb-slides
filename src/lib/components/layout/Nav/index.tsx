@@ -1,9 +1,9 @@
+import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
 import { QuickBar } from './QuickBar';
 import { SlideNav } from './SlideNav';
 import { useNavTriggers } from './useNavTriggers';
-import clsx from 'clsx';
 
 export function Nav() {
   const [open, setOpen] = useState(false);

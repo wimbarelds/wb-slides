@@ -1,7 +1,7 @@
+import clsx from 'clsx';
 import { useMemo, useState } from 'react';
 
 import type { JsonData } from '../../types';
-import clsx from 'clsx';
 
 type JsonObject = { [key: string]: JsonData };
 

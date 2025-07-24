@@ -13,11 +13,7 @@ export function Layout({ children }: Props) {
   const { type } = useCurrentSlide() ?? {};
   return (
     <>
-      <div
-        className="fixed h-full bg-black/50 w-6xl max-w-full left-1/2 -translate-x-1/2"
-        data-background
-      />
-      <main className="z-10 max-w-6xl p-12 pt-16 w-full mx-auto" data-slide-type={type}>
+      <main className="z-10 max-w-3xl p-12 w-full mx-auto bg-gray-950/50" data-slide-type={type}>
         <MDXProvider components={{ wrapper: Prose }}>{children}</MDXProvider>
       </main>
       <Nav />

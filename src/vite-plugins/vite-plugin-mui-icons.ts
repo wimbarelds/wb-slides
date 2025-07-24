@@ -1,5 +1,6 @@
-import { type PluginOption } from 'vite';
 import fetch, { type Response } from 'node-fetch';
+import { type PluginOption } from 'vite';
+
 import { fromCache, toCache } from './plugin-cache';
 
 const BROWSER_USER_AGENT =

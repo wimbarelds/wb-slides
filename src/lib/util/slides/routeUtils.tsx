@@ -1,8 +1,8 @@
+import type { ComponentType, ReactNode } from 'react';
 import { Outlet, type RouteObject } from 'react-router';
 
-import type { Topic } from '../../types';
-import type { ComponentType, ReactNode } from 'react';
 import { Layout } from '../../components/layout/Layout';
+import type { Topic } from '../../types';
 
 export function topicToRoute(topic: Topic, topicIndex: number): RouteObject {
   return {

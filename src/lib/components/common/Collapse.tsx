@@ -1,7 +1,7 @@
+import clsx from 'clsx';
 import type { ReactNode } from 'react';
 
 import { MuiIcon } from './MuiIcon';
-import clsx from 'clsx';
 
 interface Props {
   title?: ReactNode;

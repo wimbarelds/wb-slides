@@ -5,8 +5,6 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import testingLibrary from 'eslint-plugin-testing-library';
-import vitest from 'eslint-plugin-vitest';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
@@ -50,17 +48,6 @@ export default tseslint.config(
       parserOptions: {
         project: ['./tsconfig.app.json', './tsconfig.node.json'],
       },
-    },
-  },
-  {
-    files: ['**/*.test.{ts,tsx}'],
-    plugins: {
-      'testing-library': testingLibrary,
-      vitest,
-    },
-    rules: {
-      ...testingLibrary.configs.react.rules,
-      ...vitest.configs.recommended.rules,
     },
   },
   prettier,

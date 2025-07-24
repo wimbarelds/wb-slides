@@ -3,8 +3,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 
 import { Layout as DefaultLayout } from '../../components/layout/Layout';
 import type { Topic } from '../../types';
-import { SlidesContext } from './SlidesContext';
 import { createRootRoute, slidesToRoutes } from './routeUtils';
+import { SlidesContext } from './SlidesContext';
 
 interface SlidesProviderProps {
   slides: Topic[];

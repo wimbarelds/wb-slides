@@ -1,10 +1,11 @@
+/* eslint-disable react-refresh/only-export-components */
 import type { JSX } from 'react';
 
 import type { Slide, SlideComponent, Topic } from '../../types';
 import { slugify } from '../slugify';
 import { useSlides } from './hooks';
 import { SlidesProvider, SlidesRouterProvider } from './providers';
-import { slidesToRoutes, topicToRoute, createRootRoute } from './routeUtils';
+import { createRootRoute, slidesToRoutes, topicToRoute } from './routeUtils';
 
 function createSlides<T extends Topic[]>(slides: T): T {
   return slides;
@@ -45,13 +46,13 @@ function createAssignment(props: SlideProps): Slide {
 
 export {
   createAssignment,
+  createRootRoute,
   createSlide,
   createSlides,
   createTopic,
   SlidesProvider,
   SlidesRouterProvider,
-  useSlides,
-  topicToRoute,
   slidesToRoutes,
-  createRootRoute,
+  topicToRoute,
+  useSlides,
 };

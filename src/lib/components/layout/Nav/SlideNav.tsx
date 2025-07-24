@@ -1,9 +1,9 @@
+import clsx from 'clsx';
 import { type Dispatch, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router';
 
 import { useSlides } from '../../../util/slides';
 import { useNavIndeces } from '../../../util/slides/hooks';
-import clsx from 'clsx';
 
 interface SlideNavProps {
   open?: boolean;

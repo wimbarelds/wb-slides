@@ -1,8 +1,8 @@
+import clsx from 'clsx';
 import type { Dispatch } from 'react';
 
 import { useHasNextSlide, useHasPrevSlide, useSlideNav } from '../../../util/slides/hooks';
 import { MuiIcon } from '../../common/MuiIcon';
-import clsx from 'clsx';
 
 interface BarProps {
   open?: boolean;
