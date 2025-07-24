@@ -20,7 +20,6 @@ export default defineConfig(({ command }) => ({
       ? [dts({ tsconfigPath: './tsconfig.build.json', bundleTypes: true })]
       : []),
   ],
-  resolve: { noExternal: ['node-fetch'] },
   build: {
     lib: {
       entry: {

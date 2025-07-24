@@ -1,4 +1,3 @@
-import fetch, { type Response } from 'node-fetch';
 import { type PluginOption } from 'vite';
 
 import { fromCache, toCache } from './plugin-cache';
