@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.17
+
+### Patch Changes
+
+- 4abec52: Finally actually fix regex
+
 ## 0.1.16
 
 ### Patch Changes
