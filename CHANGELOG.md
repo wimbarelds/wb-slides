@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.15
+
+### Patch Changes
+
+- 42451dc: Prevent fatal error in defer-script
+
 ## 0.1.14
 
 ### Patch Changes
