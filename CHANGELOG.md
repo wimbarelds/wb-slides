@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.10
+
+### Patch Changes
+
+- 0cf98fe: update layout
+
 ## 0.1.9
 
 ### Patch Changes
