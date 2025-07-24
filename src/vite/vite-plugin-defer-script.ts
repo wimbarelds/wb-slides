@@ -1,6 +1,6 @@
 import type { Plugin, PluginOption } from 'vite';
 
-const regex = /<script .* src="[^"]*\/assets\/index-[a-zA-Z0-9]+\.js"><\/script>/;
+const regex = /<script .* src="[^"]*\/assets\/index-[a-zA-Z0-9-_]+\.js"><\/script>/;
 
 type FilterProps = Pick<Plugin, 'apply' | 'applyToEnvironment'>;
 
