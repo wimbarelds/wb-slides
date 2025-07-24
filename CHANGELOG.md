@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.12
+
+### Patch Changes
+
+- f1af9b6: Add defer script and virtual import utils
+
 ## 0.1.11
 
 ### Patch Changes
