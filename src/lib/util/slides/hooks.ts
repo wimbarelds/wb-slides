@@ -9,12 +9,12 @@ export function useSlides() {
   return useMemo(() => {
     return topics.map((topic, topicIndex) => {
       const firstSlide = topic.slides[0];
-      const topicPath = topicIndex === 0 ? '/' : `/${topic.slug}/${firstSlide.slug}`;
+      const topicPath = topicIndex === 0 ? '/' : `/${topic.slug}/${firstSlide.slug}/`;
       return {
         ...topic,
         path: topicPath,
         slides: topic.slides.map((slide, slideIndex) => {
-          const path = !topicIndex && !slideIndex ? '/' : `/${topic.slug}/${slide.slug}`;
+          const path = !topicIndex && !slideIndex ? '/' : `/${topic.slug}/${slide.slug}/`;
           return { ...slide, path };
         }),
       };

@@ -6,9 +6,9 @@ import type { Topic } from '../../types';
 
 export function topicToRoute(topic: Topic, topicIndex: number): RouteObject {
   return {
-    path: topicIndex === 0 ? '/' : `/${topic.slug}`,
+    path: topicIndex === 0 ? '/' : `/${topic.slug}/`,
     children: topic.slides.map((slide, slideIndex): RouteObject => {
-      const path = !topicIndex && !slideIndex ? '/' : `/${topic.slug}/${slide.slug}`;
+      const path = !topicIndex && !slideIndex ? '/' : `/${topic.slug}/${slide.slug}/`;
       return {
         index: slideIndex === 0,
         Component: slide.component,
