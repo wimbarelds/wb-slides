@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.13
+
+### Patch Changes
+
+- 42b88d1: bugfix export path
+
 ## 0.1.12
 
 ### Patch Changes
