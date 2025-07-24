@@ -33,8 +33,13 @@ export function vitePluginDeferScript({
   return {
     ...getFilterProps(filterRun),
     name: 'defer-script',
+    enforce: 'post',
     transformIndexHtml: (html, _context) => {
       const [match] = [...(html.match(scriptRegex) ?? [])];
+      if (!match) {
+        console.log('[vite-plugin-defer-script]: No script found');
+        return html;
+      }
       if ([' defer', ' async', ' blocking'].some((attr) => match.includes(attr))) return html;
       return html.replace(match, `<script defer ${match.slice(8)}`);
     },
