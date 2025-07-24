@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.11
+
+### Patch Changes
+
+- 460f823: Scroll on <html>
+
 ## 0.1.10
 
 ### Patch Changes
