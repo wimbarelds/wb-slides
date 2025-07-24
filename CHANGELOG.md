@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.16
+
+### Patch Changes
+
+- 4d779f2: defer-script account for basedir
+
 ## 0.1.15
 
 ### Patch Changes
