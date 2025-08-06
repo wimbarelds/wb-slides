@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.18
+
+### Patch Changes
+
+- 51e6d48: Add syntax highlighting to vite-plugin-mdx
+
 ## 0.1.17
 
 ### Patch Changes
