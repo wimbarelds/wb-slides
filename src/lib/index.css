@@ -3,6 +3,9 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@import '@wooorm/starry-night/style/core';
+@import '@wooorm/starry-night/style/dark';
+
 @layer base {
   :root {
     @apply text-[16px] sm:text-[20px];

@@ -5,6 +5,9 @@ import { fromCache, toCache } from './plugin-cache';
 const BROWSER_USER_AGENT =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
+const cssBaseUrl = 'https://fonts.googleapis.com/css2';
+const family = 'family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,-25';
+
 async function load(
   url: string,
   parser: (response: Response) => string | Promise<string>,
@@ -30,12 +33,15 @@ export function vitePluginMuiIcons(names: string[], options: Options = {}): Plug
 async function getPluginOption(names: string[], options: Options = {}): Promise<PluginOption> {
   const { inline = 'css' } = options;
 
-  const cssUrl = `https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,-25&&icon_names=${names.toSorted().join(',')}`;
+  const iconNames = names.toSorted().join(',');
+  const cssUrl = `${cssBaseUrl}?family=${family}&icon_names=${iconNames}`;
 
   if (inline === 'none') {
     return {
       name: 'mui-iconfont',
-      transformIndexHtml: () => [{ tag: 'link', attrs: { rel: 'stylesheet', href: cssUrl } }],
+      transformIndexHtml: () => [
+        { tag: 'link', injectTo: 'head', attrs: { rel: 'stylesheet', href: cssUrl } },
+      ],
     };
   }
 
@@ -47,6 +53,7 @@ async function getPluginOption(names: string[], options: Options = {}): Promise<
         transformIndexHtml: () => [
           {
             tag: 'style',
+            njectTo: 'head',
             attrs: { type: 'text/css' },
             children: css.replace(/(\r|\n|\s){2,}/g, ' '),
           },
@@ -71,6 +78,7 @@ async function getPluginOption(names: string[], options: Options = {}): Promise<
       transformIndexHtml: () => [
         {
           tag: 'style',
+          njectTo: 'head',
           attrs: { type: 'text/css' },
           children: updatedCss.replace(/(\r|\n|\s){2,}/g, ' '),
         },
