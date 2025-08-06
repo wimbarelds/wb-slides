@@ -1,5 +1,11 @@
 # wb-slides
 
+## 0.1.19
+
+### Patch Changes
+
+- dd2621e: Fix css url
+
 ## 0.1.18
 
 ### Patch Changes

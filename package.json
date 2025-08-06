@@ -1,6 +1,6 @@
 {
   "name": "wb-slides",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "A slide-deck framework for React.",
   "type": "module",
   "scripts": {
